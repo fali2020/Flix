@@ -44,8 +44,6 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
                  self.movies = dataDictionary["results"] as! [[String:Any]]
                  
                  self.collectionView.reloadData()
-                
-
              }
         }
         task.resume()
@@ -57,7 +55,6 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         return movies.count
     }
     
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
